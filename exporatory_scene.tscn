@@ -5,16 +5,12 @@
 [ext_resource type="Shader" uid="uid://cjf50qu1bvu2r" path="res://progress_bar.gdshader" id="2_6v0uh"]
 [ext_resource type="Script" uid="uid://5m2l2kmilowm" path="res://player.gd" id="2_vr4lh"]
 [ext_resource type="Script" uid="uid://iq00grairmoa" path="res://enemy.gd" id="5_a6xks"]
-[ext_resource type="Script" uid="uid://bytnxf7mnk1e1" path="res://area_2d.gd" id="6_gwngo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwngo"]
 size = Vector2(1152, 647)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vr4lh"]
 shader = ExtResource("2_6v0uh")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6xks"]
-size = Vector2(127, 127)
 
 [node name="ExporatoryScene" type="Control" unique_id=2072897197]
 layout_mode = 3
@@ -31,62 +27,15 @@ shape = SubResource("RectangleShape2D_gwngo")
 
 [node name="Player" type="Control" parent="." unique_id=826768178]
 anchors_preset = 0
+offset_left = 460.0
+offset_top = 276.0
+offset_right = 460.0
+offset_bottom = 276.0
 script = ExtResource("2_vr4lh")
 
-[node name="HealthBar" type="Sprite2D" parent="Player" unique_id=1567767709]
-material = SubResource("ShaderMaterial_vr4lh")
-position = Vector2(77, 10)
-scale = Vector2(1.078125, 0.078125)
-texture = ExtResource("1_3agob")
-
 [node name="Sprite" type="Sprite2D" parent="Player" unique_id=1983002552]
-position = Vector2(612, 355)
+position = Vector2(0, 1)
 texture = ExtResource("1_3agob")
-
-[node name="AttackButton1" type="TextureButton" parent="Player" unique_id=1590262687]
-layout_mode = 0
-offset_left = 402.0
-offset_top = 602.0
-offset_right = 530.0
-offset_bottom = 730.0
-scale = Vector2(0.4132198, 0.3561467)
-texture_normal = ExtResource("1_3agob")
-
-[node name="AttackButton2" type="TextureButton" parent="Player" unique_id=1055341945]
-layout_mode = 0
-offset_left = 460.00006
-offset_top = 601.00006
-offset_right = 588.00006
-offset_bottom = 729.00006
-scale = Vector2(0.4132198, 0.3561467)
-texture_normal = ExtResource("1_3agob")
-
-[node name="AttackButton3" type="TextureButton" parent="Player" unique_id=1943825647]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 601.0
-offset_right = 644.0
-offset_bottom = 729.0
-scale = Vector2(0.4132198, 0.3561467)
-texture_normal = ExtResource("1_3agob")
-
-[node name="AttackButton4" type="TextureButton" parent="Player" unique_id=710749231]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 602.0
-offset_right = 700.0
-offset_bottom = 730.0
-scale = Vector2(0.4132198, 0.3561467)
-texture_normal = ExtResource("1_3agob")
-
-[node name="AttackButton5" type="TextureButton" parent="Player" unique_id=853895857]
-layout_mode = 0
-offset_left = 627.00006
-offset_top = 602.0
-offset_right = 755.00006
-offset_bottom = 730.0
-scale = Vector2(0.4132198, 0.3561467)
-texture_normal = ExtResource("1_3agob")
 
 [node name="Enemy" type="Control" parent="." unique_id=1626023385]
 anchors_preset = 0
@@ -96,20 +45,63 @@ offset_right = 878.0
 offset_bottom = 357.0
 script = ExtResource("5_a6xks")
 
-[node name="HealthBar" type="Sprite2D" parent="Enemy" unique_id=1105162058]
-material = SubResource("ShaderMaterial_vr4lh")
-position = Vector2(330, -215)
-scale = Vector2(1.078125, 0.078125)
-texture = ExtResource("1_3agob")
-
 [node name="Sprite2D3" type="Sprite2D" parent="Enemy" unique_id=1004648774]
 position = Vector2(64, 65)
 texture = ExtResource("1_3agob")
 
-[node name="Area2D" type="Area2D" parent="Enemy" unique_id=2091997027]
-visible = false
-script = ExtResource("6_gwngo")
+[node name="AttackButton1" type="TextureButton" parent="." unique_id=1590262687]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 602.0
+offset_right = 530.0
+offset_bottom = 730.0
+scale = Vector2(0.4132198, 0.3561467)
+texture_normal = ExtResource("1_3agob")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" unique_id=1618004567]
-position = Vector2(320, 199)
-shape = SubResource("RectangleShape2D_a6xks")
+[node name="AttackButton2" type="TextureButton" parent="." unique_id=1055341945]
+layout_mode = 0
+offset_left = 460.00006
+offset_top = 601.00006
+offset_right = 588.00006
+offset_bottom = 729.00006
+scale = Vector2(0.4132198, 0.3561467)
+texture_normal = ExtResource("1_3agob")
+
+[node name="AttackButton3" type="TextureButton" parent="." unique_id=1943825647]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 601.0
+offset_right = 644.0
+offset_bottom = 729.0
+scale = Vector2(0.4132198, 0.3561467)
+texture_normal = ExtResource("1_3agob")
+
+[node name="AttackButton4" type="TextureButton" parent="." unique_id=710749231]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 602.0
+offset_right = 700.0
+offset_bottom = 730.0
+scale = Vector2(0.4132198, 0.3561467)
+texture_normal = ExtResource("1_3agob")
+
+[node name="AttackButton5" type="TextureButton" parent="." unique_id=853895857]
+layout_mode = 0
+offset_left = 627.00006
+offset_top = 602.0
+offset_right = 755.00006
+offset_bottom = 730.0
+scale = Vector2(0.4132198, 0.3561467)
+texture_normal = ExtResource("1_3agob")
+
+[node name="PlayerHealthBar" type="Sprite2D" parent="." unique_id=1567767709]
+material = SubResource("ShaderMaterial_vr4lh")
+position = Vector2(77, 10)
+scale = Vector2(1.078125, 0.078125)
+texture = ExtResource("1_3agob")
+
+[node name="EnemyHealthBar" type="Sprite2D" parent="." unique_id=1105162058]
+material = SubResource("ShaderMaterial_vr4lh")
+position = Vector2(1077, 12)
+scale = Vector2(1.078125, 0.078125)
+texture = ExtResource("1_3agob")
