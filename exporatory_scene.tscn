@@ -6,9 +6,6 @@
 [ext_resource type="Script" uid="uid://5m2l2kmilowm" path="res://player.gd" id="2_vr4lh"]
 [ext_resource type="Script" uid="uid://iq00grairmoa" path="res://enemy.gd" id="5_a6xks"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwngo"]
-size = Vector2(1152, 647)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vr4lh"]
 shader = ExtResource("2_6v0uh")
 
@@ -18,12 +15,6 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 650.0
 script = ExtResource("1_axsux")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=325157690]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1145761765]
-position = Vector2(575, 324.5)
-shape = SubResource("RectangleShape2D_gwngo")
 
 [node name="Player" type="Control" parent="." unique_id=826768178]
 anchors_preset = 0
