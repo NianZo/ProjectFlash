@@ -36,9 +36,11 @@ offset_right = 878.0
 offset_bottom = 357.0
 script = ExtResource("5_a6xks")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Enemy" unique_id=1004648774]
+[node name="Sprite" type="Sprite2D" parent="Enemy" unique_id=1004648774]
 position = Vector2(64, 65)
 texture = ExtResource("1_3agob")
+
+[node name="RespawnTimer" type="Timer" parent="Enemy" unique_id=914921118]
 
 [node name="AttackButton1" type="TextureButton" parent="." unique_id=1590262687]
 layout_mode = 0
