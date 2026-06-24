@@ -28,7 +28,7 @@ func _gui_input(event: InputEvent):
 	
 func hit(damage: int):
 	health -= damage
-	if health < 0:
+	if health <= 0:
 		health = 0
 		alive = false
 		$RespawnTimer.start()
