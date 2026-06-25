@@ -24,6 +24,8 @@ func _ready():
 
 func _process(delta: float):
 	stepTowardsTarget(delta)
+	if activeEnemy and !activeEnemy.alive:
+		activeEnemy = null
 
 func onAttackButton1Pressed():
 	if activeEnemy:
