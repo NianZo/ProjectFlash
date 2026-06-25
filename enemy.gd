@@ -32,9 +32,11 @@ func hit(damage: int):
 	if health <= 0:
 		health = 0
 		alive = false
+		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		$RespawnTimer.start()
 
 func respawn():
 	pass
 	alive = true
 	health = MAX_HEALTH
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
