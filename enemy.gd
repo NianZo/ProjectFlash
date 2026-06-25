@@ -14,6 +14,7 @@ func _ready():
 	health = MAX_HEALTH
 	alive = true
 	$RespawnTimer.set_wait_time(10.0) 
+	$RespawnTimer.set_one_shot(true)
 	$RespawnTimer.timeout.connect(respawn)
 
 func _process(delta: float):
